@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peer-to-Peer File Transfer</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input, button { margin: 10px; padding: 10px; }
+        #fileInput { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Peer-to-Peer File Transfer</h1>
+    <p>Enter the peer's signaling server information (we'll use WebRTC for direct connection):</p>
+
+    <input type="text" id="peerId" placeholder="Enter peer ID" />
+    <br />
+    <button onclick="connectToPeer()">Connect to Peer</button>
+    
+    <br />
+    <input type="file" id="fileInput" />
+    <br />
+    <button onclick="sendFile()">Send File</button>
+    
+    <br />
+    <h3>Peer Connection Status: <span id="status">Disconnected</span></h3>
+    
+    <script src="app.js"></script>
+</body>
+</html>
